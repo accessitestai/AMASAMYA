@@ -1,0 +1,19 @@
+# Editor + OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*~
+
+# Build artefacts (extension ZIPs built for Chrome Web Store)
+*.zip
+
+# Node (none expected in this repo, but defensive)
+node_modules/
+
+# Secrets — never commit a real key file
+*.env
+*.key
+*.pem
+**/secrets.json

@@ -1,0 +1,65 @@
+{
+  "manifest_version": 3,
+  "name": "AMASAMYA — Accessibility Audit Tool",
+  "version": "3.2.0",
+  "description": "Blind-first WCAG 2.2 audit tool with Vision AI modules: Focus Indicator Narrator, Visual Layout Auditor, and State Change Watchdog.",
+  "author": "Akhilesh Malani",
+  "homepage_url": "https://amasamya.akhileshmalani.com",
+
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "sidePanel",
+    "tabs",
+    "storage",
+    "debugger"
+  ],
+
+  "host_permissions": [
+    "<all_urls>"
+  ],
+
+  "action": {
+    "default_title": "Run AMASAMYA Audit (Ctrl+Shift+U)",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+
+  "side_panel": {
+    "default_path": "sidepanel/panel.html"
+  },
+
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+U",
+        "windows": "Ctrl+Shift+U",
+        "mac": "Command+Shift+U"
+      },
+      "description": "Run AMASAMYA accessibility audit on the current page"
+    }
+  },
+
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://amasamya.akhileshmalani.com/*"],
+      "js": ["content-script-platform.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
