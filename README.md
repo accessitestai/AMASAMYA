@@ -1,4 +1,4 @@
-# AMASAMYA — Blind-first WCAG 2.2 accessibility audit platform
+# AMASAMYA - Blind-first WCAG 2.2 accessibility audit platform
 
 AMASAMYA is an accessibility audit toolkit built for and by screen-reader users. The Chrome extension in this repository runs seventeen WCAG 2.2 audit engines on any web page in roughly five seconds and reports findings in a side panel that is itself fully operable with a keyboard and a screen reader.
 
@@ -6,26 +6,26 @@ The companion web platform at [amasamya.akhileshmalani.com](https://amasamya.akh
 
 ## What this repository contains
 
-This repository ships the **Chrome extension** source — the part most users will want to read, fork, or contribute to. The web-platform source is part of a larger personal portfolio repository and is not mirrored here.
+This repository ships the **Chrome extension** source - the part most users will want to read, fork, or contribute to. The web-platform source is part of a larger personal portfolio repository and is not mirrored here.
 
 ```
-extension/                  Chrome Manifest V3 extension source
+extension/ Chrome Manifest V3 extension source
 ├── manifest.json
-├── background.js           Service worker — audit orchestration, Vision AI bridge
-├── content-script.js       17 audit engines (run on the active page)
+├── background.js Service worker - audit orchestration, Vision AI bridge
+├── content-script.js 17 audit engines (run on the active page)
 ├── content-script-platform.js
-├── engines/                Individual engines isolated for clarity
-│   ├── aria-validation.js
-│   ├── dark-mode.js
-│   ├── dom-order.js
-│   ├── focus-narrator-inject.js
-│   ├── high-contrast.js
-│   ├── phase1-engines.js
-│   ├── state-watchdog-inject.js
-│   └── text-spacing.js
-├── sidepanel/              Audit-results UI shown in the Chrome side panel
-├── icons/                  Extension icons (16, 32, 48, 128)
-└── privacy.html            Privacy policy
+├── engines/ Individual engines isolated for clarity
+│ ├── aria-validation.js
+│ ├── dark-mode.js
+│ ├── dom-order.js
+│ ├── focus-narrator-inject.js
+│ ├── high-contrast.js
+│ ├── phase1-engines.js
+│ ├── state-watchdog-inject.js
+│ └── text-spacing.js
+├── sidepanel/ Audit-results UI shown in the Chrome side panel
+├── icons/ Extension icons (16, 32, 48, 128)
+└── privacy.html Privacy policy
 ```
 
 ## The seventeen audit engines
@@ -47,12 +47,12 @@ Each engine maps to one or more WCAG 2.2 success criteria. Every finding include
 | 11 | Text Spacing | 1.4.12 |
 | 12 | DOM Order | 1.3.2 |
 | 13 | ARIA Validation | 4.1.2 |
-| 14 | Target Size — minimum | 2.5.8 |
+| 14 | Target Size - minimum | 2.5.8 |
 | 15 | Label in Name | 2.5.3 |
-| 16 | Resize Text — 200 % zoom verification | 1.4.4 |
-| 17 | Dark Mode Contrast — palette verification | 1.4.3 (dark) |
+| 16 | Resize Text - 200 % zoom verification | 1.4.4 |
+| 17 | Dark Mode Contrast - palette verification | 1.4.3 (dark) |
 
-Three optional **Vision AI modules** (Focus Indicator Narrator, Visual Layout Auditor, State Change Watchdog) extend the audit beyond the machine-checkable engines. They are entirely opt-in and use the user's own OpenAI or Anthropic API key — no data is ever sent to AMASAMYA servers.
+Three optional **Vision AI modules** (Focus Indicator Narrator, Visual Layout Auditor, State Change Watchdog) extend the audit beyond the machine-checkable engines. They are entirely opt-in and use the user's own OpenAI or Anthropic API key - no data is ever sent to AMASAMYA servers.
 
 ## Install (end users)
 
@@ -74,7 +74,7 @@ The extension appears in your toolbar. Press `Ctrl+Shift+U` (Windows / Linux) or
 
 AMASAMYA is privacy-first by construction:
 
-- Audits run **locally** in your browser. No page content is ever sent to AMASAMYA servers — there are none.
+- Audits run **locally** in your browser. No page content is ever sent to AMASAMYA servers - there are none.
 - The optional Vision AI modules send screenshots **directly** from your browser to the provider you choose (Anthropic or OpenAI), using your own API key.
 - API keys are encrypted at rest in `chrome.storage.local` with a non-extractable WebCrypto master key. They never leave your device.
 
@@ -101,10 +101,10 @@ AMASAMYA is built to be accessible. If any part of the extension or the side-pan
 
 ## Licence
 
-MIT — see [LICENSE](LICENSE).
+MIT - see [LICENSE](LICENSE).
 
 ## Who maintains this
 
-Built and maintained by **Akhilesh Malani** — accessibility architect, digital inclusion strategist, and screen-reader user. Personal site: [akhileshmalani.com](https://akhileshmalani.com).
+Built and maintained by **Akhilesh Malani** - accessibility architect, digital inclusion strategist, and screen-reader user. Personal site: [akhileshmalani.com](https://akhileshmalani.com).
 
 If you are interested in beta-testing, partnership conversations, or commercial use, write to `akhilesh.malani@gmail.com`. AMASAMYA is fully self-funded; honest critical feedback is the most valuable contribution you can make at this stage.

@@ -1,6 +1,6 @@
 # Contributing to AMASAMYA
 
-Thank you for considering a contribution. The most valuable contributions to AMASAMYA come from the people who use the tool day-to-day — screen-reader users, accessibility professionals, and developers shipping accessible products. The bar for what counts as a useful contribution is genuinely low.
+Thank you for considering a contribution. The most valuable contributions to AMASAMYA come from the people who use the tool day-to-day - screen-reader users, accessibility professionals, and developers shipping accessible products. The bar for what counts as a useful contribution is genuinely low.
 
 ## What contributions are welcome
 
@@ -8,9 +8,9 @@ In rough order of how useful they are:
 
 1. **Bug reports against real sites.** Run the extension on any page, find a finding that looks wrong (false positive, false negative, or unclear remediation hint), and open an issue. These are the highest-signal reports.
 2. **Accessibility issues with AMASAMYA itself.** If the side panel, the audit reports, or the export formats fail with any screen reader, keyboard-only navigation, voice control, or other assistive technology, open an issue. These take priority.
-3. **WCAG criterion coverage gaps.** AMASAMYA covers 17 engines. There are real WCAG 2.2 criteria not yet automated — feature requests for specific criteria are welcome, especially with example pages where the criterion fails.
+3. **WCAG criterion coverage gaps.** AMASAMYA covers 17 engines. There are real WCAG 2.2 criteria not yet automated - feature requests for specific criteria are welcome, especially with example pages where the criterion fails.
 4. **Pull requests for engine improvements.** Small, focused, with one logical change per PR. Include a one-paragraph rationale referring to the WCAG criterion you are addressing.
-5. **Documentation and translation.** README, code comments, in-tool help text. Translation of the audit messages is particularly welcome — AMASAMYA is currently English-only.
+5. **Documentation and translation.** README, code comments, in-tool help text. Translation of the audit messages is particularly welcome - AMASAMYA is currently English-only.
 
 ## What contributions are not in scope right now
 
@@ -42,7 +42,7 @@ The most useful issue template:
 
 ## A note on tone
 
-AMASAMYA exists to close gaps that other tools have left unaddressed for years. Issues will sometimes raise things that current users have been frustrated by for a long time — please assume good faith on all sides. Comments that personally criticise other contributors or developers will be moderated.
+AMASAMYA exists to close gaps that other tools have left unaddressed for years. Issues will sometimes raise things that current users have been frustrated by for a long time - please assume good faith on all sides. Comments that personally criticise other contributors or developers will be moderated.
 
 ## Code of conduct
 
