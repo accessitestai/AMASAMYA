@@ -1,6 +1,6 @@
 # AMASAMYA - Blind-first WCAG 2.2 accessibility audit platform
 
-AMASAMYA is an accessibility audit toolkit built for and by screen-reader users. The Chrome extension in this repository runs nineteen WCAG 2.2 audit engines on any web page in roughly five seconds and reports findings in a side panel that is itself fully operable with a keyboard and a screen reader.
+AMASAMYA is an accessibility audit toolkit built for and by screen-reader users. The Chrome extension in this repository runs twenty-four WCAG 2.2 audit engines on any web page in roughly five seconds and reports findings in a side panel that is itself fully operable with a keyboard and a screen reader.
 
 The companion web platform at [amasamya.akhileshmalani.com](https://amasamya.akhileshmalani.com) extends the same audit engines to uploaded documents in eight formats (PDF, Word, PowerPoint, Excel, EPUB, and OpenDocument) and to a structured mobile-app checklist for iOS, Android, and WearOS.
 
@@ -12,7 +12,7 @@ This repository ships the **Chrome extension** source - the part most users will
 extension/ Chrome Manifest V3 extension source
 ├── manifest.json
 ├── background.js Service worker - audit orchestration, Vision AI bridge
-├── content-script.js 19 audit engines (run on the active page)
+├── content-script.js 24 audit engines (run on the active page)
 ├── content-script-platform.js
 ├── engines/ Individual engines isolated for clarity
 │ ├── aria-validation.js
@@ -28,7 +28,7 @@ extension/ Chrome Manifest V3 extension source
 └── privacy.html Privacy policy
 ```
 
-## The nineteen audit engines
+## The twenty-four audit engines
 
 Each engine maps to one or more WCAG 2.2 success criteria. Every finding includes the criterion reference, a severity rating, and a one-line remediation hint.
 
@@ -53,6 +53,11 @@ Each engine maps to one or more WCAG 2.2 success criteria. Every finding include
 | 17 | Dark Mode Contrast - palette verification | 1.4.3 (dark) |
 | 18 | Colour-Only Meaning (heuristic) | 1.4.1 |
 | 19 | Target Size AAA | 2.5.5 |
+| 20 | Identify Input Purpose | 1.3.5 |
+| 21 | Dragging Movements | 2.5.7 |
+| 22 | Consistent Help | 3.2.6 |
+| 23 | Redundant Entry | 3.3.7 |
+| 24 | Accessible Authentication (Minimum) | 3.3.8 |
 
 Three optional **Vision AI modules** (Focus Indicator Narrator, Visual Layout Auditor, State Change Watchdog) extend the audit beyond the machine-checkable engines. They are entirely opt-in and use the user's own OpenAI or Anthropic API key - no data is ever sent to AMASAMYA servers.
 
